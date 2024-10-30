@@ -19,6 +19,9 @@ public class Main_PlayerController : MonoBehaviour
 
     private Animator anim;
 
+    public GameObject Missile;
+    public Transform RectObject;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -64,6 +67,10 @@ public class Main_PlayerController : MonoBehaviour
         else
         {
             anim.SetBool("isJumping", true);
+        }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(Missile, RectObject.position, Quaternion.identity);
         }
     }
 
