@@ -17,11 +17,11 @@ public class Main_PlayerController : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    //private Animator anim;
+    private Animator anim;
 
     private void Start()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -37,14 +37,14 @@ public class Main_PlayerController : MonoBehaviour
         {
             Flip();
         }
-        //if (moveInput == 0)
-        //{
-            //anim.SetBool("isRunning", false);
-        //}
-        //else
-        //{
-            //anim.SetBool("isRunning", true);
-        //}
+        if (moveInput == 0)
+        {
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
+        }
     }
 
     private void Update()
@@ -54,17 +54,17 @@ public class Main_PlayerController : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * jumpForce;
-            //anim.SetTrigger("takeOff");
+            anim.SetTrigger("takeOf");
         }
 
-        //if (isGrounded == true)
-        //{
-            //anim.SetBool("isJumping", false);
-        //}
-        //else
-        //{
-            //anim.SetBool("isJumping", true);
-        //}
+        if (isGrounded == true)
+        {
+            anim.SetBool("isJumping", false);
+        }
+        else
+        {
+            anim.SetBool("isJumping", true);
+        }
     }
 
     void Flip()
