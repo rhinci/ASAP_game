@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5212806368525055391}
   - component: {fileID: 7308493165005627502}
   - component: {fileID: 3820406619059105817}
+  - component: {fileID: 6499436073023364986}
   m_Layer: 0
   m_Name: bear
   m_TagString: Untagged
@@ -202,3 +203,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.43246794, y: -0.16499758}
   m_Size: {x: 11.591029, y: 11.591029}
   m_Direction: 0
+--- !u!114 &6499436073023364986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8261692690124288549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956cb013edaefb743a04b7381aa0e8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  jumpForce: 0
+  moveInput: 0
+  feetpos: {fileID: 8858863314461336982}
+  checkRadius: 0.2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  players: {fileID: 0}

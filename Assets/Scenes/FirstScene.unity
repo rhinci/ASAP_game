@@ -229,6 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 239241818}
+  - component: {fileID: 239241819}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -253,6 +254,20 @@ Transform:
   - {fileID: 4745737187200901382}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239241819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239241817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb546c4a62a8de4db5bef6512a94530, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 869285993}
+  Player2: {fileID: 869209466}
 --- !u!1 &399502980
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +279,7 @@ GameObject:
   - component: {fileID: 399502982}
   - component: {fileID: 399502981}
   - component: {fileID: 399502983}
+  - component: {fileID: 399502984}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -290,7 +306,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 869286004}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 34
     OrthographicSize: 4.57
@@ -342,6 +358,21 @@ MonoBehaviour:
   m_Damping: 0.5
   m_MaxWindowSize: -1
   m_Padding: 0
+--- !u!114 &399502984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399502980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcaced1a6af5764c8a843e38e3144c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player1: {fileID: 869286004}
+  Player2: {fileID: 4745737187200901382}
+  Player1obj: {fileID: 869285993}
 --- !u!1 &445362792
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +910,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &869209466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8261692690124288549, guid: 9a754abfb3780434b8531fadebc3134e, type: 3}
+  m_PrefabInstance: {fileID: 4745737187200901381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &869285993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7868979089448226617, guid: 925a3e0d54f22e042a4398dd799c92fd, type: 3}
@@ -1749,6 +1785,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6499436073023364986, guid: 9a754abfb3780434b8531fadebc3134e, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6499436073023364986, guid: 9a754abfb3780434b8531fadebc3134e, type: 3}
+      propertyPath: players
+      value: 
+      objectReference: {fileID: 239241817}
+    - target: {fileID: 6499436073023364986, guid: 9a754abfb3780434b8531fadebc3134e, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8257529932311624277, guid: 9a754abfb3780434b8531fadebc3134e, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1839,6 +1887,14 @@ PrefabInstance:
       propertyPath: Missile
       value: 
       objectReference: {fileID: 9033274757063762779, guid: a8376d880700da140b58e3b36f5337b0, type: 3}
+    - target: {fileID: 7312488186924634371, guid: 925a3e0d54f22e042a4398dd799c92fd, type: 3}
+      propertyPath: players
+      value: 
+      objectReference: {fileID: 239241817}
+    - target: {fileID: 7312488186924634371, guid: 925a3e0d54f22e042a4398dd799c92fd, type: 3}
+      propertyPath: checkRadius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7868979089448226617, guid: 925a3e0d54f22e042a4398dd799c92fd, type: 3}
       propertyPath: m_Name
       value: main_char
