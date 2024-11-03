@@ -6,7 +6,7 @@ using UnityEngine;
 public class NVcamFollow : MonoBehaviour
 {
     public Transform Player1, Player2;
-    public GameObject Player1obj;
+    public GameObject Player1obj, Player2obj;
     private CinemachineVirtualCamera vcam;
 
     void Start()
@@ -15,14 +15,16 @@ public class NVcamFollow : MonoBehaviour
     }
 
     private void Update()
-    {
-        Debug.Log(Player1obj.activeSelf);
-        if (Player1obj.activeSelf == true)
+    { 
+
+        switch (Player1obj.activeSelf)
         {
-            vcam.Follow = Player1;
-        } else
-        {
-            vcam.Follow = Player2;
+            case true:
+                vcam.Follow = Player1;
+                break;
+            case false:
+                vcam.Follow = Player2;
+                break;
         }
     }
 }

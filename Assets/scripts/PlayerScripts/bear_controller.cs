@@ -19,11 +19,11 @@ public class bear_controller : MonoBehaviour
 
     public GameObject players;
 
-    //private Animator anim;
+    private Animator anim;
 
     private void Start()
     {
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -39,14 +39,14 @@ public class bear_controller : MonoBehaviour
         {
             Flip();
         }
-        /*if (moveInput == 0)
+        if (moveInput == 0)
         {
             anim.SetBool("isRunning", false);
         }
         else
         {
             anim.SetBool("isRunning", true);
-        }*/
+        }
     }
 
     private void Update()
@@ -56,17 +56,17 @@ public class bear_controller : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * jumpForce;
-            //anim.SetTrigger("takeOf");
+            anim.SetTrigger("takeOf");
         }
 
-        /*if (isGrounded == true)
+        if (isGrounded == true)
         {
             anim.SetBool("isJumping", false);
         }
         else
         {
             anim.SetBool("isJumping", true);
-        }*/
+        }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
