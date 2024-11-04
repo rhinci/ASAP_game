@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Main_PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
@@ -20,11 +20,13 @@ public class Main_PlayerController : MonoBehaviour
     private Animator anim;
 
     public GameObject players;
+    public GameObject trans;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        trans.gameObject.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -69,9 +71,17 @@ public class Main_PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            players.GetComponent<switcher>().SwitchCharacter();
-            
+            trans.transform.position = transform.position;
+            trans.gameObject.SetActive(true);
+            StartCoroutine(DeactivateAfterTime(0.25f));
+            Invoke("Switch", 0.3f);
+
         }
+    }
+
+    private void Switch()
+    {
+        players.GetComponent<switcher>().SwitchCharacter();
     }
 
     void Flip()
@@ -80,5 +90,14 @@ public class Main_PlayerController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+
+    private IEnumerator DeactivateAfterTime(float time)
+    {
+        // Ждем указанное время
+        yield return new WaitForSeconds(time);
+
+        // Деактивируем объект
+        trans.SetActive(false);
     }
 }

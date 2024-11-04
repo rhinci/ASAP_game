@@ -6,7 +6,7 @@ using UnityEngine;
 public class NVcamFollow : MonoBehaviour
 {
     public Transform Player1, Player2;
-    public GameObject Player1obj, Player2obj;
+    public GameObject Player1obj;
     private CinemachineVirtualCamera vcam;
 
     void Start()
