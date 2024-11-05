@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
+                Debug.Log("υσι");
                 anim.SetTrigger("attack");
                 
             }
