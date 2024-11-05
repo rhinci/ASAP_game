@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public float heal;
 
     private void Update()
     {
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
             health = numOfHearts;
         }
 
+        health += Time.deltaTime * heal;
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < Mathf.RoundToInt(health))
