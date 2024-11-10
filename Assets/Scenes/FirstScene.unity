@@ -2777,7 +2777,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0012534, y: 1.75842, z: -10}
+  m_LocalPosition: {x: 1.6707367, y: 1.75884, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4180,8 +4180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11e39a0ebde5744fb5eed669acb8b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_health: 100
-  max_health: 100
 --- !u!4 &869286004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3502404884037754749, guid: 925a3e0d54f22e042a4398dd799c92fd, type: 3}
@@ -5713,7 +5711,7 @@ MonoBehaviour:
   message: "\u041F\u0440\u043E\u0441\u044B\u043F\u0430\u0439\u0441\u044F, \u043C\u043E\u0451
     \u0434\u0438\u0442\u044F! \u0422\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E
     \u0438\u0434\u0442\u0438, \u0434\u0432\u0438\u0433\u0430\u0439\u0441\u044F \u0432\u0433\u043B\u0443\u0431\u044C
-    \u043B\u0435\u0441\u043E\u0432, \u0441\u043B\u0435\u0434\u0443\u044F \u0442\u0440\u043E\u043F\u0430\u043C
+    \u043B\u0435\u0441\u0430, \u0441\u043B\u0435\u0434\u0443\u044F \u0442\u0440\u043E\u043F\u0430\u043C
     \u0441\u0432\u0435\u0442\u0430 \u0438 \u0442\u0435\u043D\u0438."
 --- !u!61 &1214769171
 BoxCollider2D:
@@ -6997,6 +6995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1: {fileID: 869285993}
   Player2: {fileID: 869209466}
+  tipTable: {fileID: 1668050092}
 --- !u!114 &1480292908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8423,6 +8422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 1670878945}
+  activeTips: 0
 --- !u!1 &1670861995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8192948809057794339, guid: 669b017ebd70ed645bd5ebcaa8ef84c8, type: 3}

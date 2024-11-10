@@ -14,14 +14,14 @@ public class TipsManager : MonoBehaviour
 
     private Animator anim;
 
-    private int activeTips;
+    public int activeTips;
 
     void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         displayTipEvent += displayTip;
         disableTipEvent += disableTip;
