@@ -80,11 +80,12 @@ public class enemy : MonoBehaviour
 
         target = ActivePlayer.GetComponent<Transform>();
 
-        /*if (health <= 0)
-        {
-            Destroy(gameObject);
-        }*/
 
+        
+    }
+
+    private void FixedUpdate()
+    {
         if (chill == true)
         {
             Chill();
