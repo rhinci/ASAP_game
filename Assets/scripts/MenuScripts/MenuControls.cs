@@ -7,7 +7,7 @@ public class MenuControls : MonoBehaviour
 {
     public void PlayPressed()   //переключение сцены на игру
     {
-        SceneManager.LoadScene("FirstScene");
+        SceneManager.LoadScene("Story");
     }
 
     public void ExitPressed() //выход из игры
