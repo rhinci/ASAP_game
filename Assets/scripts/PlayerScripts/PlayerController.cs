@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool facingRight = true;
+    public bool activated = false;
 
     private bool isGrounded;
     public Transform feetpos;
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isJumping", true);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && activated == true)
         {
             trans.transform.position = transform.position;
             trans.gameObject.SetActive(true);
