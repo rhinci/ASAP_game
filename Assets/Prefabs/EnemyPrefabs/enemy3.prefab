@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8863110726753516671}
   - component: {fileID: 6073663408596153151}
+  - component: {fileID: 1053503015298030907}
   - component: {fileID: 7980860859772423312}
   - component: {fileID: 2773468854568528400}
   - component: {fileID: 3964933385712696981}
@@ -89,6 +90,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1053503015298030907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899319580256787512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c634564cbe66f418aecca90d46238a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!114 &7980860859772423312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,11 +116,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 1
-  health: 3
   speed: 3
   damage: 1
-  startStopTime: 0.7
-  normalSpeed: 3
+  positionOfPatrol: 0
+  point: {fileID: 0}
+  stoppingDistance: 0
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  player: {fileID: 0}
 --- !u!95 &2773468854568528400
 Animator:
   serializedVersion: 5

@@ -8,7 +8,7 @@ public class enemy : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    public int health;
+    //public int health;
     public float speed;
     public int damage;
     public int positionOfPatrol;
@@ -80,10 +80,10 @@ public class enemy : MonoBehaviour
 
         target = ActivePlayer.GetComponent<Transform>();
 
-        if (health <= 0)
+        /*if (health <= 0)
         {
             Destroy(gameObject);
-        }
+        }*/
 
         if (chill == true)
         {
@@ -115,10 +115,10 @@ public class enemy : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    /*public void TakeDamage(int damage)
     {
         health -= damage;
-    }
+    }*/
     public void OnEnemyAttack()
     {
         player.GetComponent<Player>().health -= damage;

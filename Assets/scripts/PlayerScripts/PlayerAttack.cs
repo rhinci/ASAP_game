@@ -20,7 +20,6 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetMouseButton(0))
             {
-                Debug.Log("υσι");
                 anim.SetTrigger("attack");
                 
             }
@@ -37,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
         for (int i = 0; i < enemies.Length; i++)
         {
-            enemies[i].GetComponent<enemy>().TakeDamage(damage);
+            enemies[i].GetComponent<wall>().TakeDamage(damage);
         }
     }
     private void OnDrawGizmosSelected()
