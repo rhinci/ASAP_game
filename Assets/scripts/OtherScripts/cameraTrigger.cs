@@ -18,7 +18,8 @@ public class cameraTrigger : MonoBehaviour
        if (other.tag == "Player")
        {
             vcam.GetComponent<CinemachineVirtualCamera>().m_Lens.OrthographicSize = LensSize;
-       }
+            vcam.GetComponent<CinemachineConfiner2D>().m_Padding += 0.1f;
+        }
     }
 
 }
