@@ -6,7 +6,7 @@ public class TipsTrigger : MonoBehaviour
 {
     [Header("Текст подсказки")]
     [TextArea(3, 10)]
-    [SerializeField] private string message;
+    public string message;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

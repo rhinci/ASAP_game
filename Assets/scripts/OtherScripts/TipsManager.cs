@@ -10,7 +10,7 @@ public class TipsManager : MonoBehaviour
     public static Action<string> displayTipEvent;
     public static Action disableTipEvent;
 
-    [SerializeField] private TMP_Text messageText;
+    public TMP_Text messageText;
 
     private Animator anim;
 
@@ -32,7 +32,7 @@ public class TipsManager : MonoBehaviour
         displayTipEvent -= displayTip;
         disableTipEvent -= disableTip;
     }
-    private void displayTip(string message)
+    public void displayTip(string message)
     {
         messageText.text = message;
         anim.SetInteger("state", ++activeTips);
