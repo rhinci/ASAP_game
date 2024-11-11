@@ -23,7 +23,7 @@ public class bossHearts : MonoBehaviour
         health = GetComponent<wall>().health;
         if (health <= 0)
         {
-            SceneManager.LoadScene("DeathMenu");
+            SceneManager.LoadScene("winMenu");
         }
     }
 
