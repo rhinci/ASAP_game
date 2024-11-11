@@ -27,6 +27,8 @@ public class enemy : MonoBehaviour
     bool angry = false;
     bool goBack = false;
 
+    public GameObject playerDamage;
+
     private void Start()
     {
         facingLeft = true;
@@ -108,6 +110,7 @@ public class enemy : MonoBehaviour
             if (timeBtwAttack <= 0)
             {
                 anim.SetTrigger("enemyAttack");
+  
             }
             else
             {
@@ -123,6 +126,7 @@ public class enemy : MonoBehaviour
     public void OnEnemyAttack()
     {
         player.GetComponent<Player>().health -= damage;
+        Instantiate(playerDamage, transform.position, Quaternion.identity);
         timeBtwAttack = startTimeBtwAttack;
     }
 

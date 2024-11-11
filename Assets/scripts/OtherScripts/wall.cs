@@ -5,6 +5,7 @@ using UnityEngine;
 public class wall : MonoBehaviour
 {
     public int health;
+    public GameObject enemyDamage;
 
     private void Update()
     {
@@ -17,5 +18,6 @@ public class wall : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        Instantiate(enemyDamage, transform.position, Quaternion.identity);
     }
 }
