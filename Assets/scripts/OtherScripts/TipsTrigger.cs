@@ -7,6 +7,13 @@ public class TipsTrigger : MonoBehaviour
     [Header("Текст подсказки")]
     [TextArea(3, 10)]
     public string message;
+    public GameObject tipTable;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = tipTable.GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +28,7 @@ public class TipsTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             TipsManager.disableTipEvent?.Invoke();
+            anim.SetInteger("state", 0);
         }
     }
 }
